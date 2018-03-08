@@ -22,7 +22,7 @@ var result = languageUtils.English.highlight('made', 'make', (c)=> `**${c}**`);
 ```
 
 
-You highlight the vowel, too.
+You can highlight the vowel, too.
 
 ```js
 //print [ˋva<ʊ><ə>l]
