@@ -1,4 +1,8 @@
 
+var i18n = {
+  'zh':require('./i18n/i18n.zh')
+};
+
 function highlight(text, original, decorate) {
   var result = [];
   var isCut = new RegExp(text);
@@ -13,11 +17,16 @@ function highlight(text, original, decorate) {
     if (targetValue && val !== targetValue) result.push(decorate(val)); else result.push(val);
   });
 
-
   return result.join('');
 }
 
+function getSpeechText(text, lang) {
+  var key = text.replace(/\.$/, '');
+  return i18n[lang]['speech'][key];
+}
+
 module.exports = {
-  highlight:highlight
+  highlight:highlight,
+  getSpeechText:getSpeechText
 };
 
