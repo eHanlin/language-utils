@@ -14,7 +14,8 @@ function highlight(text, original, decorate) {
   .split('')
   .forEach(function(val, index){
     var targetValue = original[index];
-    if (targetValue && val !== targetValue) result.push(decorate(val)); else result.push(val);
+
+    if (typeof targetValue == 'undefined' || targetValue && val !== targetValue) result.push(decorate(val)); else result.push(val);
   });
 
   return result.join('');

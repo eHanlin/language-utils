@@ -15,6 +15,8 @@ describe('language-utils', function(){
       var result = languageUtils.English.highlight('made', 'make', highlightDecorator);
       assert.equal(true, result === 'ma<d>e');
 
+      result = languageUtils.English.highlight('driving', 'drive', highlightDecorator);
+      assert.equal(true, result === 'driv<i><n><g>');
     });
 
     it('should return true when present word is the same target word', function(){
