@@ -4,11 +4,11 @@ var languageUtils = require('../src/index');
 
 describe('language-utils', function(){
 
-  describe('#English.highlight', function(){
+  function highlightDecorator(value) {
+    return '<' + value + '>';
+  }
 
-    function highlightDecorator(value) {
-      return '<' + value + '>';
-    }
+  describe('#English.highlight', function(){
 
     it('should return true when letter is different in word', function(){
 
@@ -43,6 +43,16 @@ describe('language-utils', function(){
       var result = languageUtils.English.getSpeechText('adj.', 'zh');
       assert.equal(true, result === '形容詞');
 
+    });
+
+  });
+
+  describe('#English.highlightVowel', function() {
+
+    it('should return true when text contains vowel', function() {
+
+      var result = languageUtils.English.highlightVowel('[ˋvaʊəl]', highlightDecorator);
+      assert.equal(true, result === '[ˋva<ʊ><ə>l]');
     });
 
   });
