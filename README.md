@@ -22,10 +22,18 @@ var result = languageUtils.English.highlight('made', 'make', (c)=> `**${c}**`);
 ```
 
 
+You highlight the vowel, too.
+
+```js
+//print [ˋva<ʊ><ə>l]
+languageUtils.English.highlightVowel('[ˋvaʊəl]', (c)=> `<${c}>`);
+```
+
 Get speech text of `zh`.
 
 ```js
 language.English.getSpeechText('adj.', 'zh');
 ```
+
 
 
