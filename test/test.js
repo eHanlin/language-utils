@@ -33,6 +33,18 @@ describe('language-utils', function(){
 
   });
 
+
+  describe('#English.getSpeechText', function() {
+
+    it('should return true when get speech is the same i18n content', function() {
+
+      var result = languageUtils.English.getSpeechText('adj.', 'zh');
+      assert.equal(true, result === '形容詞');
+
+    });
+
+  });
+
 });
 
 
