@@ -4,6 +4,12 @@ language-utils
 
 The **language-utils** offers some utility features, such as **highlight**. 
 
+## Install
+
+```sh
+npm install language-utils
+```
+
 ## Usage
 
 Like this if you want to decorate highlighted letter.
