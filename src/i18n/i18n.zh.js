@@ -1,6 +1,8 @@
 
 module.exports = { 
   'speech':{       
+    'article':'冠詞',
+    'art':'冠詞',
     'abbr':'縮寫',
     'phr':'片語',
     'noun':'名詞',
