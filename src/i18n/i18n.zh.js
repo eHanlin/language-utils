@@ -1,6 +1,7 @@
 
 module.exports = { 
   'speech':{       
+    'abbr':'縮寫',
     'phr':'片語',
     'noun':'名詞',
     'n':'名詞', 
