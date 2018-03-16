@@ -4,6 +4,7 @@ module.exports = {
     'article':'冠詞',
     'art':'冠詞',
     'abbr':'縮寫',
+    'aux':'助動詞',
     'phr':'片語',
     'noun':'名詞',
     'n':'名詞', 
