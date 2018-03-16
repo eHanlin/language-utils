@@ -3,7 +3,7 @@ var i18n = {
   'zh':require('./i18n/i18n.zh')
 };
 
-var vowels = ['i','ɪ','e','ɛ','æ','ɑ','o','ɔ','u','ʊ','ʌ','ə','ɝ','ɚ','aɪ','aʊ','ɔɪ'];
+var vowels = ['aɪ','aʊ','ɔɪ','i','ɪ','e','ɛ','æ','ɑ','o','ɔ','u','ʊ','ʌ','ə','ɝ','ɚ'];
 
 function highlight(text, original, decorate) {
   var result = [];
@@ -30,9 +30,10 @@ function getSpeechText(text, lang) {
 
 
 function highlightVowel(text, decorate) {
-  return text.split('').map(function(val) {
-    return vowels.indexOf(val) != -1 ? decorate(val) : val;
-  }).join('');
+  var rVowel = new RegExp('(' + vowels.join('|') + ')', 'g');
+  return text.replace(rVowel, function(match) {
+    return decorate(match);
+  });
 }
 
 module.exports = {

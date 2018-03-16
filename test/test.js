@@ -52,7 +52,7 @@ describe('language-utils', function(){
     it('should return true when text contains vowel', function() {
 
       var result = languageUtils.English.highlightVowel('[ˋvaʊəl]', highlightDecorator);
-      assert.equal(true, result === '[ˋva<ʊ><ə>l]');
+      assert.equal(true, result === '[ˋv<aʊ><ə>l]');
     });
 
   });
