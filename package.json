@@ -2,7 +2,7 @@
   "name": "language-utils",
   "main": "src/index.js",
   "description": " The language-utils offers some utility features, such as highlight.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha"
   },
