@@ -25,7 +25,7 @@ var result = languageUtils.English.highlight('made', 'make', (c)=> `**${c}**`);
 You can highlight the vowel, too.
 
 ```js
-//print [ˋva<ʊ><ə>l]
+//print [ˋv<aʊ><ə>l]
 languageUtils.English.highlightVowel('[ˋvaʊəl]', (c)=> `<${c}>`);
 ```
 
