@@ -1,6 +1,7 @@
 
 module.exports = { 
   'speech':{       
+    'sent':'句子',
     'article':'冠詞',
     'art':'冠詞',
     'abbr':'縮寫',
