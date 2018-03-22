@@ -33,6 +33,13 @@ describe('language-utils', function(){
 
     });
 
+    it('should return true when target text ending is equal to original text', function() {
+
+      var result = languageUtils.English.highlight('more careless', 'careless', highlightDecorator);
+      assert.equal(true, result === '<more> careless');
+
+    });
+
   });
 
 

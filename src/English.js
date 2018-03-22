@@ -8,9 +8,15 @@ var vowels = ['aɪ','aʊ','ɔɪ','i','ɪ','e','ɛ','æ','ɑ','o','ɔ','u','ʊ','
 function highlight(text, original, decorate) {
   var result = [];
   var isCut = new RegExp(text);
+  var isStringEnding = new RegExp(original +'$');
 
   if (original === text) return decorate(text);
   if (isCut.test(original)) return decorate(text);
+  if (isStringEnding.test(text)) {
+    return text.replace(new RegExp('(.*)( )(careless)$'), function(match, first, second, third){
+      return decorate(first) + second + third;
+    });
+  }
 
   text
   .split('')
