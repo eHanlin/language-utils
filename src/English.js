@@ -13,7 +13,7 @@ function highlight(text, original, decorate) {
   if (original === text) return decorate(text);
   if (isCut.test(original)) return decorate(text);
   if (isStringEnding.test(text)) {
-    return text.replace(new RegExp('(.*)( )(careless)$'), function(match, first, second, third){
+    return text.replace(new RegExp('(.*)( )(' + original + ')$'), function(match, first, second, third){
       return decorate(first) + second + third;
     });
   }
